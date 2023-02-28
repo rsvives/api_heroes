@@ -21,3 +21,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/heroes', [HeroController::class, 'getAllHeroes']);
 Route::get('/heroes/{id}', [HeroController::class, 'getHeroById']);
 Route::post('/heroes', [HeroController::class, 'newHero']);
+Route::delete('/heroes/{id}', [HeroController::class, 'deleteHero']);

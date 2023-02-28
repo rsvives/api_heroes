@@ -19,7 +19,8 @@ class HeroFactory extends Factory
         return [
             'name' => fake()->name(),
             'height' => fake()->numberBetween(120, 220),
-            'weight' => fake()->randomFloat(1, 45, 200)
+            'weight' => fake()->randomFloat(1, 45, 120),
+            // 'identity_id' => 1
         ];
     }
 }
