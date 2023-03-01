@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HeroController;
+use App\Http\Controllers\IdentityController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -21,4 +22,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/heroes', [HeroController::class, 'getAllHeroes']);
 Route::get('/heroes/{id}', [HeroController::class, 'getHeroById']);
 Route::post('/heroes', [HeroController::class, 'newHero']);
+Route::put('/heroes/{id}', [HeroController::class, 'updateHero']);
 Route::delete('/heroes/{id}', [HeroController::class, 'deleteHero']);
+
+Route::get('/identities', [IdentityController::class, 'getAllIdentities']);

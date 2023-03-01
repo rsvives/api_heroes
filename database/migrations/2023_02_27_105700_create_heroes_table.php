@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Identity;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -16,6 +17,8 @@ return new class extends Migration
             $table->string('name');
             $table->integer('height');
             $table->float('weight');
+            // $table->foreignId('identity_id')->references('id')->on('identities');
+            // $table->foreignIdFor(Identity::class);
             $table->timestamps();
         });
     }

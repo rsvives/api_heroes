@@ -16,8 +16,19 @@ class IdentityFactory extends Factory
      */
     public function definition(): array
     {
-        return [
-            //
-        ];
+        // $identities = [];
+        // for ($i = 0; $i < 10; $i++) {
+        $identity =
+            [
+                "name" => fake()->firstName(),
+                "surname" => fake()->lastName(),
+                "gender" => fake()->randomElement(['male', 'female', 'other']),
+                "city" => fake()->city(),
+                "hero_id" => 1
+            ];
+        // array_push($identities, $identity);
+        // }
+        // return [$identities];
+        return $identity;
     }
 }
